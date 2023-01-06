@@ -126,6 +126,9 @@ li{
       #member li {
         width: 32%;
       }
+      #member .text{
+        text-align: left;    
+      }
       
       /*-------------------------------------------
       footer
