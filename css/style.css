@@ -3,6 +3,32 @@
 html{
     font-size: 100%;
 }
+
+/*ヘッダの固定表示に関する記述*/
+.site-header{
+  background: #fff;
+  display: flex;
+  padding: 20px 10px;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.gnav-menu{
+  display: flex;
+}
+
+.gnav-menu-item{
+  margin-left: 20px;
+}
+
+.gnav-menu-item a{
+  color: #333;
+  text-decoration: none;
+}
+
+/*ヘッダの固定表示に関する記述終わり*/
+
 body{
     color: #383e45;
     font-size: 0.9rem;
@@ -66,16 +92,10 @@ li{
 }
 
     /*---------------------------------------
-    Mainisual
+    Mainvisual
     ---------------------------------------*/
     #mainvisual{
         margin-bottom: 80px;
-    }
-    #mainvisual img{
-        width: 100%;
-        max-width: 1920px;
-        height: auto;
-        object-fit: cover;
     }
     
     /*-------------------------------------------
@@ -126,9 +146,6 @@ li{
       #member li {
         width: 32%;
       }
-      #member .text{
-        text-align: left;    
-      }
       
       /*-------------------------------------------
       footer
@@ -147,8 +164,8 @@ SP
       /*-------------------------------------------
       Mainvisual
       -------------------------------------------*/
-        #mainvisual img {
-          height: calc(100vh - 60px);
+        #mainvisual img{
+          margin-top: 80px;
         }
       
       /*-------------------------------------------
