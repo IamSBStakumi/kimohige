@@ -25,7 +25,7 @@ html{
 }
 
 .gnav-menu-item{
-  margin-left: 40px;
+  margin-left: 30px;
   margin-top: auto;
 }
 
@@ -190,10 +190,16 @@ SP
     margin-left: 0px;
   }
 
+  .gnav-menu{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   /*ヘッダの固定表示に関する記述*/
   .gnav-menu-item{
     margin-left: 20px;
     margin-top: auto;
+    padding: 10px 0;
   }
 
   .gnav-menu-item a{
@@ -203,7 +209,7 @@ SP
   .site-header{
     background: #000;
     display: flex;
-    padding: 15px 10px;
+    padding: 10px 5px;
     position: fixed;
     justify-content: space-between;
     width: 100%;
