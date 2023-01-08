@@ -3,6 +3,22 @@
 html{
     font-size: 100%;
 }
+/*-------------------
+ヘッダー
+-------------------*/
+.site-title{
+  font-size: 0.9rem;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.site-title a{
+  color: #fff;
+}
+
+.site-title p{
+  color: #fff;
+}
 
 .gnav-menu{
   display: flex;
@@ -14,31 +30,33 @@ html{
 }
 
 .gnav-menu-item a{
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
 }
 
 /*ヘッダの固定表示に関する記述*/
 .site-header{
-  background: #fff;
+  background: #000;
   display: flex;
   padding: 20px 10px;
   position: fixed;
   justify-content: space-between;
   width: 100%;
+  height: 100px;
   margin: 0 auto;
   z-index: 9999;  /* 常に表面に表示 */
 }
 /*ヘッダの固定表示に関する記述終わり*/
 
 body{
-    color: #383e45;
-    font-size: 1.0rem;
+  font-family: 'Arial', 'メイリオ', sans-serif;
+  color: #383e45;
+  font-size: 1.0rem;
 }
 
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img{
@@ -50,14 +68,6 @@ li{
     list-style: none; /*リストの・を消す*/
 }
 
-.site-title{
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-.site-title a{
-    display: block;
-}
 .section-title{
     display: inline-block;
     font-size: 2rem;
@@ -88,6 +98,12 @@ Mainvisual
 ---------------------------------------*/
 #mainvisual{
   margin-bottom: 80px;
+}
+
+.name-title{
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0 4px;
 }
     
 /*-------------------------------------------
@@ -157,6 +173,12 @@ footer
 SP
 -------------------------------------------*/
 @media screen and (max-width: 1280px) {
+  .site-title{
+    font-size: 0.9rem;
+    text-align: center;
+    margin-left: 0px;
+  }
+
   /*ヘッダの固定表示に関する記述*/
   .gnav-menu-item{
     margin-left: 20px;
@@ -168,7 +190,7 @@ SP
   }
 
   .site-header{
-    background: #fff;
+    background: #000;
     display: flex;
     padding: 15px 10px;
     position: fixed;
