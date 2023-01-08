@@ -51,8 +51,19 @@ html{
 
 body{
   font-family: 'Arial', 'メイリオ', sans-serif;
-  color: #383e45;
+  color: #000/*#383e45*/;
   font-size: 1.0rem;
+  text-align: center;
+  background-image: url("../img/background.jpg");
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+main{
+  height: 100%;
+  width: 1080px;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 a{
@@ -73,7 +84,7 @@ li{
     font-size: 2rem;
     text-align: center;
     margin-bottom: 60px;
-    border-bottom: solid 1px #383e45;
+    border-bottom: solid 1px #000/*#383e45*/;
 }
 
 .content-title{
@@ -157,7 +168,7 @@ Member
 }
 
 #member li {
-  width: 32%;
+  width: 100%;
 }
       
 /*-------------------------------------------
@@ -196,6 +207,10 @@ SP
     position: fixed;
     justify-content: space-between;
     width: 100%;
+  }
+
+  main{
+    width: 360px;
   }
       
 /*-------------------------------------------
