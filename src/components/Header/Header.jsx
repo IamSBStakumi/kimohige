@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { getResponsiveSize } from "../GetResponsible/getResponsible";
 import logoImg from "../img/logo.jpg";
 
 const Header =()=>{
@@ -21,27 +22,28 @@ const Header =()=>{
 const Wrapper = styled.div`
     background-color: #000;
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     display: flex;
 `;
 
 const Logo = styled.img`
-    width: 20%;
+    ${getResponsiveSize("width", [200])}
     height: 100%;
 `;
 
 const Pages = styled.ul`
     display: flex;
-    margin-left: 100px;
+    ${getResponsiveSize("margin-left", [0])}
     text-align: right;
 `
 
 const PageText = styled.li`
     color: #fff;
     list-style: none;
-    font-size: 20px;
+    ${getResponsiveSize("font-size", [40])}
     margin: auto;
-    padding-left: 20px;
+    ${getResponsiveSize("padding-left", [15])}
+
 `;
 
 export default Header;
