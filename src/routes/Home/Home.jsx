@@ -1,8 +1,13 @@
-import Header from "../../components/Header";
+import styled from "styled-components";
+import HomeImage from "../../components/img/mainvisual.jpg";
+
+const MainVisual = styled.img`
+    width: 100%;
+`;
 
 const Home=()=>{
     return(
-        <Header />
+        <MainVisual src={HomeImage} alt="キモヒゲの成長記録" />        
     )
 }
 
