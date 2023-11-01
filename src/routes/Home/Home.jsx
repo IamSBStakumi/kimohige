@@ -3,6 +3,7 @@ import HomeImage from "../../components/img/mainvisual.jpg";
 
 const MainVisual = styled.img`
     width: 100%;
+    height: 20%;
 `;
 
 const Home=()=>{

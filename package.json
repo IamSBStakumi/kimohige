@@ -7,21 +7,33 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^29.5.7",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@types/react-lazy-load-image-component": "^1.6.2",
     "axios": "^1.4.0",
     "lodash": "^4.17.21",
+    "msw": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.15.0",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.0.7",
+    "typescript": "5.2.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:es": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:style": "stylelint --fix 'src/**/*.{css,js,jsx,ts,tsx}'",
+    "lint": "yarn lint:es && yarn lint:style",
+    "format": "prettier --write --loglevel=warn 'src/**/*.{css,js,jsx,ts,tsx,json}'",
+    "fix": "yarn format && yarn lint"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +51,49 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.29",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-gitignore": "^0.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "^8.4.31",
+    "postcss-syntax": "^0.36.2",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.11.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "ts-jest": "^29.1.1"
+  },
+  "resolutions": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
+    "react-error-overlay": "6.0.11",
+    "@types/react": "17.0.30",
+    "stylelint/postcss": "8.4.27"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{css,js,jsx,ts,tsx}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.json": [
+      "prettier --write --loglevel=warn"
+    ],
+    "*": [
+      "secretlint"
     ]
   }
 }
