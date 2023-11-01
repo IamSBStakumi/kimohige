@@ -1,21 +1,19 @@
-const defaultScreenSize=980;
-const minScreenSize=320;
-const maxScreenSize=1980;
+const defaultScreenSize = 980;
+const minScreenSize = 320;
+const maxScreenSize = 1980;
 
-export function getResponsiveSize(
-    property, defaultSize
-){
-    let defaultStyle="";
-    let minSizeStyle="";
-    let maxSizeStyle="";
+function getResponsiveSize(property, defaultSize) {
+  let defaultStyle = "";
+  let minSizeStyle = "";
+  let maxSizeStyle = "";
 
-    defaultSize.forEach((size) => {
-        defaultStyle += `calc(100vw/${defaultScreenSize}*${size})`;
-        minSizeStyle += `calc(${minScreenSize}px/${defaultScreenSize}*${size})`;
-        maxSizeStyle += `calc(${maxScreenSize}px/${defaultScreenSize}*${size})`;
-    });
+  defaultSize.forEach((size) => {
+    defaultStyle += `calc(100vw/${defaultScreenSize}*${size})`;
+    minSizeStyle += `calc(${minScreenSize}px/${defaultScreenSize}*${size})`;
+    maxSizeStyle += `calc(${maxScreenSize}px/${defaultScreenSize}*${size})`;
+  });
 
-    return `
+  return `
         ${property}:${defaultStyle};
 
         @media(max-width: ${minScreenSize}px){
@@ -27,3 +25,5 @@ export function getResponsiveSize(
         }
     `;
 }
+
+export default getResponsiveSize;

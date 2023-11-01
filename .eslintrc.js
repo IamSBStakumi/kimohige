@@ -11,7 +11,7 @@ module.exports = {
         jest: true,
     },
     extends: ["airbnb", "airbnb/hooks", "plugin:import/recommended", "plugin:import/typescript", "prettier"],
-    parseOptions: {
+    parserOptions: {
         ecmaVersion: 13,
     },
     rules: {
@@ -26,7 +26,8 @@ module.exports = {
         "react/function-component-definition": [2, {namedConponents: "arrow-function"}],
         "padding-line-between-statements": [
             "error",
-            {breakLine: "always",
+            {
+             blankLine: "always",
              prev: "*",
              next: "return",
             },
@@ -39,7 +40,7 @@ module.exports = {
             },
         ],
         "import/extensions": [
-            "errror",
+            "error",
             "ignorePackages",
             {
                 js: "never",
@@ -58,14 +59,16 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "react/jsx-key": ["error"],
         "import/no-extraneous-dependencies": ["off"],
-        "prefer-destructing": [
-            "error",
-            {
-                AssignmentExpression: {
-                    array: false,
-                },
-            },
-        ],
+        // "prefer-destructing": [
+        //     "error",
+        //     {
+        //         AssignmentExpression: {
+        //             array: false,
+        //             object: true,
+        //         },
+        //         enforceForRenamedProperties: true
+        //     },
+        // ],
     },
     overrides: [
         {
@@ -76,7 +79,7 @@ module.exports = {
                 "plugin:@typescript-eslint/recommended-requiring-type-checking",
                 "prettier",
             ],
-            parseOptions: {
+            parserOptions: {
                 project: "./tsconfig.eslint.json",
                 tsconfigRootDir: __dirname,
             },
