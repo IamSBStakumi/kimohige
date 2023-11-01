@@ -3,19 +3,17 @@ import getResponsiveSize from "../GetResponsible/getResponsible";
 import logoImg from "../img/logo.jpg";
 
 function Header() {
-  return (
-    <Wrapper>
-      <Logo src={logoImg} alt="キモヒゲロゴ" />
-      <Pages>
-        <PageText>About</PageText>
-        <PageText>News</PageText>
-        <PageText>Member</PageText>
-        <PageText>YouTube</PageText>
-        <PageText>SNS</PageText>
-        <PageText>Contacts</PageText>
-      </Pages>
-    </Wrapper>
-  );
+  return <Wrapper>
+    <Logo src={logoImg} alt="キモヒゲロゴ" />
+    <Pages>
+      <PageText>About</PageText>
+      <PageText>News</PageText>
+      <PageText>Member</PageText>
+      <PageText>YouTube</PageText>
+      <PageText>SNS</PageText>
+      <PageText>Contacts</PageText>
+    </Pages>
+  </Wrapper>
 }
 
 const Wrapper = styled.div`

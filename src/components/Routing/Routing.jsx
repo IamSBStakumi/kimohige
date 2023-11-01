@@ -6,7 +6,7 @@ import { Main } from "../StyledComponents/StyledDiv";
 import Header from "../Header";
 
 const Home = lazy(() => import("../../routes/Home"));
-const Member = lazy(()=> import("../../routes/Member"));
+const Member = lazy(() => import("../../routes/Member"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -21,8 +21,8 @@ const queryClient = new QueryClient({
   },
 });
 
-const Layout = () => {
-  <>
+function Layout() {
+  return <>
     <Header />
     <Main>
       <QueryClientProvider client={queryClient}>
@@ -31,8 +31,8 @@ const Layout = () => {
         </Suspense>
       </QueryClientProvider>
     </Main>
-  </>;
-};
+  </>
+}
 
 function Routing() {
   const route = (path, element, children) => ({ path, element, children });
