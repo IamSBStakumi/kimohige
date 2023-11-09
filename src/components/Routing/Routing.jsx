@@ -22,16 +22,18 @@ const queryClient = new QueryClient({
 });
 
 function Layout() {
-  return <>
-    <Header />
-    <Main>
-      <QueryClientProvider client={queryClient}>
-        <Suspense fallback={<h1>Loading...</h1>}>
-          <Outlet />
-        </Suspense>
-      </QueryClientProvider>
-    </Main>
-  </>
+  return (
+    <>
+      <Header />
+      <Main>
+        <QueryClientProvider client={queryClient}>
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Outlet />
+          </Suspense>
+        </QueryClientProvider>
+      </Main>
+    </>
+  );
 }
 
 function Routing() {

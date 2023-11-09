@@ -7,7 +7,7 @@ const MainVisual = styled.img`
 `;
 
 function Home() {
-  return <MainVisual src={HomeImage} alt="キモヒゲの成長記録" />
+  return <MainVisual src={HomeImage} alt="キモヒゲの成長記録" />;
 }
 
 export default Home;
