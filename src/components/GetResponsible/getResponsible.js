@@ -1,6 +1,6 @@
 const defaultScreenSize = 980;
-const minScreenSize = 320;
-const maxScreenSize = 1980;
+const minScreenSize = 330;
+const maxScreenSize = 1000;
 
 function getResponsiveSize(property, defaultSize) {
   let defaultStyle = "";

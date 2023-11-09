@@ -12,18 +12,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Main = styled.div`
-  width: 390px;
-  min-height: calc(100vh-194px);
-  margin: 0 auto;
-  clear: both;
-
-  &::after {
-    display: block;
-    clear: both;
-    font-size: 0.1rem;
-    visibility: hidden;
-    content: "";
-  }
+  width: 100%;
+  background-image: url(${(props) => props.bgimage});
+  background-repeat: repeat;
+  background-size: auto;
 `;
 
 export default All;
