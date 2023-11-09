@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as routes from "../../constants/routes";
 import { Main } from "../StyledComponents/StyledDiv";
 import Header from "../Header";
+import bgimage from "../img/background.jpg";
 
 const Home = lazy(() => import("../../routes/Home"));
 const Member = lazy(() => import("../../routes/Member"));
@@ -25,7 +26,7 @@ function Layout() {
   return (
     <>
       <Header />
-      <Main>
+      <Main bgimage={bgimage}>
         <QueryClientProvider client={queryClient}>
           <Suspense fallback={<h1>Loading...</h1>}>
             <Outlet />
