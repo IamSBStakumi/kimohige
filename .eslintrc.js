@@ -65,20 +65,16 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/jsx-key": ["error"],
     "import/no-extraneous-dependencies": ["off"],
-    "prefer-destructuring": [
-      "error",
-      {
-        VariableDeclarator: {
-          array: false,
-          object: true,
-        },
-        AssignmentExpression: {
-          array: true,
-          object: true,
-        },
-        enforceForRenamedProperties: false,
-      },
-    ],
+    // "prefer-destructuring": [
+    //   "error",
+    //   {
+    //     array: true,
+    //     object: true,
+    //   },
+    //   {
+    //     enforceForRenamedProperties: false,
+    //   },
+    // ],
   },
   overrides: [
     {
