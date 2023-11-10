@@ -6,7 +6,7 @@
   },
   "editor.formatOnSave": true,
   "eslint.packageManager": "yarn",
-  "eslint.workingDirectories": ["./src"],
+  "eslint.workingDirectories": ["./"],
   "stylelint.packageManager": "yarn",
   "typescript.tsdk": "./node_modules/typescript/lib",
   "editor.defaultFormatter": "esbenp/prettier-vscode",
