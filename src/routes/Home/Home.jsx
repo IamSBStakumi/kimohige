@@ -4,7 +4,6 @@ import { Icon, NameText, WhiteBlock, Introduction } from "../../components/Style
 function Home() {
   return (
     <WhiteBlock>
-      {/* <Title>キモヒゲOFFICIAL WEB SITE</Title> */}
       <Icon src={IconImage} alt="キモヒゲのアイコン" />
       <NameText>キモヒゲ</NameText>
       <Introduction>
@@ -14,7 +13,7 @@ function Home() {
         <br />
         1分程度の短いおもしろ動画を
         <br />
-        水曜日，土曜日の20時にUPしている．
+        水曜，土曜の20時にUPしている．
       </Introduction>
     </WhiteBlock>
   );

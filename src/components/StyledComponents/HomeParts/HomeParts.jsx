@@ -13,7 +13,7 @@ const NameText = styled.h3`
 `;
 
 const WhiteBlock = styled.div`
-  width: 100%;
+  width: 85%;
   background-color: #fff;
   margin: auto;
   text-align: center;

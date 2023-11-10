@@ -1,6 +1,10 @@
 import { styled } from "styled-components";
 import getResponsiveSize from "../GetResponsible/getResponsible";
 
+interface BgImageProps {
+  $bgimage?: string;
+}
+
 const All = styled.div`
   display: flex;
   frex-direction: column;
@@ -12,9 +16,9 @@ export const Wrapper = styled.div`
   margin-top: 20px;
 `;
 
-export const Main = styled.div`
+export const Main = styled.div<BgImageProps>`
   width: 100%;
-  background-image: url(${(props) => props.bgimage});
+  background-image: url(${(props) => props.$bgimage});
   background-repeat: repeat;
   background-size: auto;
   position: flexed;
