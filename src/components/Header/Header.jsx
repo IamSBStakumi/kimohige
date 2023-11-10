@@ -13,7 +13,7 @@ function Header() {
     <Wrapper>
       <Logo src={logoImg} alt="キモヒゲロゴ" onClick={() => Routing("/")} />
       <Pages>
-        <PageText>About</PageText>
+        <PageText onClick={() => Routing("/")}>Home</PageText>
         <PageText>News</PageText>
         <PageText onClick={() => Routing("/member")}>Member</PageText>
         <PageText>YouTube</PageText>

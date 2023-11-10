@@ -2,9 +2,10 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as routes from "../../constants/routes";
-import { Main } from "../StyledComponents/StyledDiv";
+import { Main, MainVisual, Title } from "../StyledComponents/StyledDiv";
 import Header from "../Header";
 import bgimage from "../img/background.jpg";
+import HomeImage from "../img/mainvisual.jpg";
 
 const Home = lazy(() => import("../../routes/Home"));
 const Member = lazy(() => import("../../routes/Member"));
@@ -26,7 +27,9 @@ function Layout() {
   return (
     <>
       <Header />
-      <Main bgimage={bgimage}>
+      <Main $bgimage={bgimage}>
+        <MainVisual src={HomeImage} alt="キモヒゲの成長記録" />
+        <Title>キモヒゲOFFICIAL WEB SITE</Title>
         <QueryClientProvider client={queryClient}>
           <Suspense fallback={<h1>Loading...</h1>}>
             <Outlet />

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import getResponsiveSize from "../GetResponsible/getResponsible";
 
 const All = styled.div`
   display: flex;
@@ -16,6 +17,18 @@ export const Main = styled.div`
   background-image: url(${(props) => props.bgimage});
   background-repeat: repeat;
   background-size: auto;
+  position: flexed;
+`;
+
+export const MainVisual = styled.img`
+  width: 100%;
+`;
+
+export const Title = styled.h2`
+  margin: 0;
+  ${getResponsiveSize("font-size", [60])}
+  text-align: center;
+  background-color: #fff;
 `;
 
 export default All;
