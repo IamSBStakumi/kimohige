@@ -14,8 +14,10 @@
     "@types/react-lazy-load-image-component": "^1.6.2",
     "axios": "^1.4.0",
     "firebase": "^10.5.2",
+    "firebase-tools": "^13.1.0",
     "lodash": "^4.17.21",
     "msw": "^2.0.1",
+    "package.json": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.15.0",
@@ -103,9 +105,6 @@
     ],
     "src/**/*.json": [
       "prettier --write --loglevel=warn"
-    ],
-    "*": [
-      "secretlint"
     ]
   }
 }
