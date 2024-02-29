@@ -13,7 +13,7 @@
     "@types/react-dom": "^18.2.14",
     "@types/react-lazy-load-image-component": "^1.6.2",
     "axios": "^1.4.0",
-    "firebase": "^10.5.2",
+    "firebase": "^10.8.1",
     "firebase-tools": "^13.1.0",
     "lodash": "^4.17.21",
     "msw": "^2.0.1",
