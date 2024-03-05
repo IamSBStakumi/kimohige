@@ -1,6 +1,6 @@
-import Hige from "./img/hige.png";
-import Megane from "./img/megane.png";
-import Staff from "./img/staff.png";
+import Hige from "./img/hige.jpeg";
+import Megane from "./img/megane.jpeg";
+import Staff from "./img/staff.jpeg";
 
 function Member() {
   return (
