@@ -2,12 +2,16 @@ import Hige from "./img/hige.png";
 import Megane from "./img/megane.png";
 import Staff from "./img/staff.png";
 
-const Member = () => {
-  <div>
-    <image src={Hige} />
-    <image src={Megane} />
-    <image src={Staff} />
-  </div>;
-};
+function Member() {
+  const a = 0;
+
+  return (
+    <>
+      <image src={Hige} />
+      <image src={Megane} />
+      <image src={Staff} />
+    </>
+  );
+}
 
 export default Member;
