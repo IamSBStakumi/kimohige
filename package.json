@@ -36,7 +36,7 @@
     "lint": "yarn lint:es && yarn lint:style",
     "format": "prettier --write --loglevel=warn 'src/**/*.{css,js,jsx,ts,tsx,json}'",
     "fix": "yarn format && yarn lint",
-    "commitmsg": "commitlint -e $GIT_PARAMAS",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "prepare": "husky install"
   },
   "eslintConfig": {
