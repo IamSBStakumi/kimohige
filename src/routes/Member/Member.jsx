@@ -3,14 +3,12 @@ import Megane from "./img/megane.png";
 import Staff from "./img/staff.png";
 
 function Member() {
-  const a = 0;
-
   return (
-    <>
+    <div>
       <image src={Hige} />
       <image src={Megane} />
       <image src={Staff} />
-    </>
+    </div>
   );
 }
 
