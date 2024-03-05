@@ -49,9 +49,7 @@ function Routing() {
   // メンバーページ
   pages.push(route(`${routes.MEMBER}`, <Member />));
 
-  const router = createBrowserRouter([route("/", <Layout />, pages)], {
-    basename: process.env.PUBLIC_URL,
-  });
+  const router = createBrowserRouter([route("/", <Layout />, pages)]);
 
   return <RouterProvider router={router} />;
 }
