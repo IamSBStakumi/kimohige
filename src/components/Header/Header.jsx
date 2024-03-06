@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Wrapper, Logo, Pages, PageText } from "../StyledComponents/HeaderParts/HeaderParts";
 import logoImg from "../img/logo.jpg";
 
-function Header() {
+const Header = () => {
   const navigate = useNavigate();
 
   const Routing = (page) => {
@@ -22,6 +22,6 @@ function Header() {
       </Pages>
     </Wrapper>
   );
-}
+};
 
 export default Header;
