@@ -6,13 +6,15 @@ const Home = () => (
     <Icon src={IconImage} alt="キモヒゲのアイコン" />
     <NameText>キモヒゲ</NameText>
     <Introduction>
-      2020年10月より動画投稿を始める．
+      2020年10月より動画投稿を始める
       <br />
-      面白い動画で人に笑ってもらうため，YouTubeで活動中.
+      面白い動画で人に笑ってもらうため
+      <br />
+      YouTubeで活動中
       <br />
       1分程度の短いおもしろ動画を
       <br />
-      水曜，土曜の20時にUPしている．
+      水曜・土曜の20時にUPしている
     </Introduction>
   </WhiteBlock>
 );

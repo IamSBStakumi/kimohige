@@ -4,7 +4,8 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": false,
   "eslint.packageManager": "yarn",
   "eslint.workingDirectories": ["./"],
   "stylelint.packageManager": "yarn",

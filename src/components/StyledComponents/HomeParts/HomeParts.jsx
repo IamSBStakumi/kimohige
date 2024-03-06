@@ -2,9 +2,9 @@ import styled from "styled-components";
 import getResponsiveSize from "../../GetResponsible/getResponsible";
 
 const Icon = styled.img`
+  width: 24%;
   border-radius: 50%;
   ${getResponsiveSize("margin-top", [100])}
-  width: 24%;
 `;
 
 const NameText = styled.h3`
@@ -13,16 +13,17 @@ const NameText = styled.h3`
 `;
 
 const WhiteBlock = styled.div`
+  align-items: center;
+  justify-content: center;
   width: 85%;
-  background-color: #fff;
   margin: auto;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  background-color: #fff;
 `;
 
 const Introduction = styled.p`
-  ${getResponsiveSize("font-size", [44])}
+  ${getResponsiveSize("font-size", [40])}
+
   margin: auto;
   text-align: start;
   ${getResponsiveSize("padding-top", [10])}
