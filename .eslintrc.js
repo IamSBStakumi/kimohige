@@ -26,8 +26,8 @@ module.exports = {
     "react/function-component-definition": [
       2,
       {
-        namedComponents: "function-declaration",
-        unnamedComponents: "function-expression",
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
       },
     ],
     "padding-line-between-statements": [

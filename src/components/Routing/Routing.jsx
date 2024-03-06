@@ -23,8 +23,7 @@ const queryClient = new QueryClient({
   },
 });
 
-function Layout() {
-  return (
+const Layout = () => (
     <>
       <Header />
       <Main $bgimage={bgimage}>
@@ -37,10 +36,9 @@ function Layout() {
         </QueryClientProvider>
       </Main>
     </>
-  );
-}
+  )
 
-function Routing() {
+const Routing = () => {
   const route = (path, element, children) => ({ path, element, children });
 
   const pages = [];
@@ -49,7 +47,7 @@ function Routing() {
   // メンバーページ
   pages.push(route(`${routes.MEMBER}`, <Member />));
 
-  const router = createBrowserRouter([route("/", <Layout />, pages)]);
+  const router = createBrowserRouter([route("/", <Layout />, pages)], { basename: process.env.PUBLIC_URL });
 
   return <RouterProvider router={router} />;
 }
