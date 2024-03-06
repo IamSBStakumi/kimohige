@@ -4,9 +4,9 @@ import Staff from "./img/staff.jpeg";
 
 const Member = () => (
   <div>
-    <image src={Hige} />
-    <image src={Megane} />
-    <image src={Staff} />
+    <img src={Hige} alt="キモヒゲ" />
+    <img src={Megane} alt="キモメガネ" />
+    <img src={Staff} alt="キモスタッフ" />
   </div>
 );
 
