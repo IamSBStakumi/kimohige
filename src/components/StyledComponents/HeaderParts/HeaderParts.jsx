@@ -2,14 +2,14 @@ import styled from "styled-components";
 import getResponsiveSize from "../../GetResponsible/getResponsible";
 
 const Wrapper = styled.div`
-  background-color: #000;
-  width: 100%;
-  ${getResponsiveSize("height", [120])}
   position: sticky;
-  display: flex;
-  z-index: 9999;
-  margin: 0 auto;
   top: 0;
+  z-index: 9999;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #000;
+  ${getResponsiveSize("height", [120])}
 `;
 
 const Logo = styled.img`
@@ -21,16 +21,17 @@ const Logo = styled.img`
   }
 `;
 
-const Pages = styled.ul`
+const Pages = styled.div`
   display: flex;
+  width: 80%;
   text-align: right;
 `;
 
-const PageText = styled.li`
+const PageText = styled.p`
+  margin: auto;
   color: #fff;
   list-style: none;
   ${getResponsiveSize("font-size", [32])}
-  margin: auto;
   ${getResponsiveSize("padding-right", [20])}
 
   &:hover {
