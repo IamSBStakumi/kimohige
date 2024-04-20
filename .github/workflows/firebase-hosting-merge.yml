@@ -27,6 +27,6 @@ jobs:
         run: firebase deploy --only hosting
 
       - name: Remove Credentials File
-        if: success() | failure()
+        if: success() || failure()
         run: |
           rm google-application-credentials.json
