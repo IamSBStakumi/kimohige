@@ -21,7 +21,7 @@ jobs:
       - name: Prepare Google Application Credentials
         shell: bash
         run: |
-          echo "${{ secrets.DEV_GOOGLE_APPLICATION_CREDENTIALS_BASE64 }}" | base64 --decode > "google-application-credentials.json"
+          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_BASE64 }}" | base64 --decode > "google-application-credentials.json"
       - name: Deploy Firebase functions
         shell: bash
         run: firebase deploy --only hosting
