@@ -9,12 +9,24 @@ name: Deploy to Firebase Hosting on merge
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS: google-application-credentials.json
     steps:
-      - uses: actions/checkout@v4
-      - run: yarn install && yarn run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KIMOHIGE }}'
-          channelId: live
-          projectId: kimohige
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install Dependencies and Build
+        run: yarn install && yarn run build
+      - name: Setup Firebase 
+        run: yarn global add firebase-tools
+      - name: Prepare Google Application Credentials
+        shell: bash
+        run: |
+          echo "${{ secrets.DEV_GOOGLE_APPLICATION_CREDENTIALS_BASE64 }}" | base64 --decode > "google-application-credentials.json"
+      - name: Deploy Firebase functions
+        shell: bash
+        run: firebase deploy --only hosting
+
+      - name: Remove Credentials File
+        if: success() | failure()
+        run: |
+          rm google-application-credentials.json
